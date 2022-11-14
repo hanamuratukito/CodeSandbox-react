@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const App = () => {
   const onClickButton = () => {
@@ -9,6 +9,14 @@ const App = () => {
     color: `blue`,
     fontSize: `18px`
   };
+
+  useEffect(() => {
+    console.log("useEffect- num");
+  }, [num]);
+
+  useEffect(() => {
+    console.log("最初");
+  }, []);
   return (
     <React.Fragment>
       <h1 style={{ color: `red` }}>こんには！</h1>
