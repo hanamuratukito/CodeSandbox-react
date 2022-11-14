@@ -1,10 +1,16 @@
 import React from "react";
 
 const App = () => {
+  const onClickButton = () => alert();
+  const contentStyle = {
+    color: `blue`,
+    fontSize: `18px`
+  };
   return (
     <React.Fragment>
-      <h1>こんには！</h1>
-      <p>お元気ですか？</p>
+      <h1 style={{ color: `red` }}>こんには！</h1>
+      <p style={contentStyle}>お元気ですか？</p>
+      <button onClick={onClickButton}>ボタン</button>
     </React.Fragment>
   );
 };
